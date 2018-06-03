@@ -1,0 +1,24 @@
+<footer>
+  <p class="copyright">
+    <span class="sr-only">Copyright</span> &copy; <span class="copyright-year">{{ site.time | date: '%Y' }}</span>
+  </p>
+
+  <ul class="social-links">
+    {% for link in site.navigation.social_links %}
+      <li>
+        <a class="social-link social-link-{{ link.class_prefix }}" href="{{ link.href }}" rel="noopener" target="_blank" title="{{ link.text | escape }}">
+          {% if link.icon_stack %}
+            <span class="fa-stack">
+              {% for icon in link.icon_stack %}
+                <i class="fa {{ icon }} fa-stack-{{ forloop.rindex }}x" aria-hidden="true"></i>
+              {% endfor %}
+            </span>
+          {% else %}
+            <i class="fa {{ link.icon }} fa-2x" aria-hidden="true"></i>
+          {% endif %}
+          <span class="sr-only">{{ link.text | escape }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</footer>

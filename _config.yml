@@ -1,0 +1,18 @@
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+exclude:
+  - Gemfile
+  - README.md
+title: Mercer
+description: Home of the Mercer family
+url: https://mercer.scot
+lang: en
+google_analytics_account: UA-120203508-1
+navigation:
+  social_links:
+    - href: mailto:hi@mercer.scot
+      class_prefix: email
+      icon: fa-envelope-square
+      text: Email

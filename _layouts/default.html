@@ -1,0 +1,47 @@
+---
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    {% if page.title or layout.title %}
+      <title>
+        {{ page.title | default: layout.title | escape }}
+        {% if paginator and paginator.page > 1 %}(Page {{ paginator.page }}){% endif %}
+        &middot; {{ site.title | escape }}
+      </title>
+    {% else %}
+      <title>{{ site.title | escape }}</title>
+    {% endif %}
+
+    {% seo title=false %}
+    {% feed_meta %}
+
+    {% if page.previous %}
+      <link rel="prev" href="{{ page.previous.url | absolute_url }}">
+    {% endif %}
+    {% if page.next %}
+      <link rel="next" href="{{ page.next.url | absolute_url }}">
+    {% endif %}
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <meta name="theme-color" content="#3399FF">
+  </head>
+
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <main>
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    <script src="/assets/js/analytics.js"></script>
+  </body>
+</html>

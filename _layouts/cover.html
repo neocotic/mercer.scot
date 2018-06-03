@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="cover-container">
+  <div class="cover">
+    <a class="cover-logo {{ page.cover.logo_class }}" href="/" title="{{ site.title | escape }}">
+      Mercer
+    </a>
+
+    {% if page.cover.heading %}
+      <h1 class="cover-heading">{{ page.cover.heading | escape }}</h1>
+    {% endif %}
+  </div>
+</div>
