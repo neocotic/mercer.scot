@@ -30,18 +30,18 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Sigmar+One">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}">
 
-    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/img/android-chrome-192x192.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32x32.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/img/favicon-16x16.png' | relative_url }}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/img/favicon.ico' | relative_url }}">
-    <link rel="manifest" type="application/manifest+json" href="{{ '/site.webmanifest' | relative_url }}">
-    <link rel="mask-icon" type="image/svg+xml" href="{{ '/assets/img/safari-pinned-tab.svg' | relative_url }}" color="{{ site.browser_theme_color }}">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | absolute_url }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/img/android-chrome-192x192.png' | absolute_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32x32.png' | absolute_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/img/favicon-16x16.png' | absolute_url }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/img/favicon.ico' | absolute_url }}">
+    <link rel="manifest" type="application/manifest+json" href="{{ '/site.webmanifest' | absolute_url }}">
+    <link rel="mask-icon" type="image/svg+xml" href="{{ '/assets/img/safari-pinned-tab.svg' | absolute_url }}" color="{{ site.browser_theme_color }}">
     <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
     <meta name="application-name" content="{{ site.title }}">
-    <meta name="msapplication-config" content="{{ '/browserconfig.xml' | relative_url }}">
+    <meta name="msapplication-config" content="{{ '/browserconfig.xml' | absolute_url }}">
     <meta name="msapplication-TileColor" content="{{ site.browser_theme_color }}">
     <meta name="theme-color" content="{{ site.browser_theme_color }}">
   </head>
@@ -53,6 +53,6 @@
 
     {% include footer.html %}
 
-    <script src="{{ '/assets/js/analytics.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/analytics.js' | absolute_url }}"></script>
   </body>
 </html>
